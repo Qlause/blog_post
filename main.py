@@ -77,7 +77,9 @@ class Comments(db.Model):
     #  relation to Users table and populate comments collumn
     post = relationship("BlogPost", back_populates="comments")
     post_id = db.Column(db.Integer, db.ForeignKey('blog_posts.id'))
-    
+
+#run one time
+db.create_all()
 
 # Funcs
 # Return Current User 
