@@ -182,7 +182,6 @@ def contact():
 
 
 @app.route("/new-post", methods=['post', 'get'])
-@admin_only
 def add_new_post():
     form = CreatePostForm()
     if form.validate_on_submit():
@@ -200,7 +199,6 @@ def add_new_post():
 
 
 @app.route("/edit-post/<int:post_id>")
-@admin_only
 def edit_post(post_id):
     post = BlogPost.query.get(post_id)
     edit_form = CreatePostForm(
