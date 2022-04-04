@@ -12,7 +12,7 @@ from forms import CreatePostForm, CreateRegister, LogIn, CommentsForm
 import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY)
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 app.config['CKEDITOR_PKG_TYPE'] = 'full-all'
 ckeditor = CKEditor(app)
 Bootstrap(app)
